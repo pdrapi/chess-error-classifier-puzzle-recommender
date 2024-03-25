@@ -1,0 +1,7 @@
+*csv
+.DS_Store
+.vscode/
+__pycache__/
+old code/
+stockfish/
+data/
