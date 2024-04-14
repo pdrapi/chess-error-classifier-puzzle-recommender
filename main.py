@@ -1,10 +1,7 @@
-from re import S
 import berserk
 import chess.pgn
 import chess.engine
 from collections import defaultdict
-
-from hamcrest import is_
 
 class Player:
     def __init__(self, api_token, username, engine_path=None):
