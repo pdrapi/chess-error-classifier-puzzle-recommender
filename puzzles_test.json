@@ -1,0 +1,422 @@
+{
+    "advancedPawn": {
+        "PuzzleId": "001w5",
+        "FEN": "1rb2rk1/q5P1/4p2p/3p3p/3P1P2/2P5/2QK3P/3R2R1 b - - 0 29",
+        "Moves": "f8f7 c2h7 g8h7 g7g8q",
+        "Rating": 1073,
+        "GameUrl": "https://lichess.org/0e1vxAEn/black#57"
+    },
+    "advantage": {
+        "PuzzleId": "0000D",
+        "FEN": "5rk1/1p3ppp/pq3b2/8/8/1P1Q1N2/P4PPP/3R2K1 w - - 2 27",
+        "Moves": "d3d6 f8d8 d6d8 f6d8",
+        "Rating": 1452,
+        "GameUrl": "https://lichess.org/F8M8OS71#52"
+    },
+    "anastasiaMate": {
+        "PuzzleId": "01J5O",
+        "FEN": "r4r1k/1pp1NppR/3p4/p3n3/4P3/1PPP2P1/1P1K2P1/3R4 b - - 0 22",
+        "Moves": "h8h7 d1h1",
+        "Rating": 680,
+        "GameUrl": "https://lichess.org/2DUSUcNf/black#43"
+    },
+    "arabianMate": {
+        "PuzzleId": "00dt1",
+        "FEN": "Q7/8/3B4/2p5/Krkn4/8/8/8 w - - 1 54",
+        "Moves": "a4a3 d4b5 a3a2 b5c3 a2a1 b4b1",
+        "Rating": 2239,
+        "GameUrl": "https://lichess.org/AQkAsoMX#106"
+    },
+    "attackingF2F7": {
+        "PuzzleId": "007tv",
+        "FEN": "r3k1nr/1pp2ppp/1pnp2q1/4p1B1/2B1P3/3P1Q1P/PPP2PP1/R4RK1 b kq - 0 11",
+        "Moves": "g6g5 f3f7 e8d8 f7f8 d8d7 f8a8",
+        "Rating": 1342,
+        "GameUrl": "https://lichess.org/ky7qZNjk/black#21"
+    },
+    "attraction": {
+        "PuzzleId": "001w5",
+        "FEN": "1rb2rk1/q5P1/4p2p/3p3p/3P1P2/2P5/2QK3P/3R2R1 b - - 0 29",
+        "Moves": "f8f7 c2h7 g8h7 g7g8q",
+        "Rating": 1073,
+        "GameUrl": "https://lichess.org/0e1vxAEn/black#57"
+    },
+    "backRankMate": {
+        "PuzzleId": "001Wz",
+        "FEN": "4r1k1/5ppp/r1p5/p1n1RP2/8/2P2N1P/2P3P1/3R2K1 b - - 0 21",
+        "Moves": "e8e5 d1d8 e5e8 d8e8",
+        "Rating": 1127,
+        "GameUrl": "https://lichess.org/84RH3LaP/black#41"
+    },
+    "bishopEndgame": {
+        "PuzzleId": "00A5m",
+        "FEN": "8/1p6/p1p2p2/P3b3/1PK3P1/2PBk3/8/8 b - - 3 60",
+        "Moves": "e3d2 d3f5 e5c7 f5c8 b7b6 a5b6 c7b6 c8a6",
+        "Rating": 2019,
+        "GameUrl": "https://lichess.org/Y4Ftfosz/black#119"
+    },
+    "bodenMate": {
+        "PuzzleId": "001gi",
+        "FEN": "r6r/1pNk1ppp/2np4/b3p3/4P1b1/N1Q5/P4PPP/R3KB1R w KQ - 3 18",
+        "Moves": "c7a8 a5c3",
+        "Rating": 848,
+        "GameUrl": "https://lichess.org/1sV2Hr22#34"
+    },
+    "capturingDefender": {
+        "PuzzleId": "00Bp0",
+        "FEN": "1r2kr2/pp3p1p/2b1p3/4N3/2P1n3/1N1B4/P3KP1P/6R1 w - - 5 22",
+        "Moves": "e5c6 b7c6 d3e4",
+        "Rating": 1238,
+        "GameUrl": "https://lichess.org/GN8F9TsL/black#41"
+    },
+    "castling": {
+        "PuzzleId": "01xdm",
+        "FEN": "r3k2r/4bppp/p2p4/2pPp3/4P1n1/2N2P1q/PP1BQP1P/R3K2R b KQkq - 6 15",
+        "Moves": "g4h2 e1c1 h3f3 h1h2 f3e2 c3e2",
+        "Rating": 1901,
+        "GameUrl": "https://lichess.org/kaULwkrz/black#29"
+    },
+    "clearance": {
+        "PuzzleId": "004sg",
+        "FEN": "6k1/p3b2p/1p1pP3/2p3P1/1Pnp3B/P6P/3Q3K/8 w - - 0 38",
+        "Moves": "b4c5 c4d2 c5c6 d6d5 g5g6 e7d6",
+        "Rating": 2281,
+        "GameUrl": "https://lichess.org/pSRIvt7K#74"
+    },
+    "crushing": {
+        "PuzzleId": "00008",
+        "FEN": "r6k/pp2r2p/4Rp1Q/3p4/8/1N1P2R1/PqP2bPP/7K b - - 0 24",
+        "Moves": "f2g3 e6e7 b2b1 b3c1 b1c1 h6c1",
+        "Rating": 1995,
+        "GameUrl": "https://lichess.org/787zsVup/black#47"
+    },
+    "defensiveMove": {
+        "PuzzleId": "002Uy",
+        "FEN": "8/8/1p6/k7/P1R5/1K5r/8/8 w - - 26 64",
+        "Moves": "c4c3 h3c3 b3c3 a5a4 c3b2 a4b4",
+        "Rating": 1753,
+        "GameUrl": "https://lichess.org/sLU7YN1A#126"
+    },
+    "deflection": {
+        "PuzzleId": "001h8",
+        "FEN": "2r3k1/2r4p/4p1p1/1p1q1pP1/p1bP1P1Q/P6R/5B2/2R3K1 b - - 5 34",
+        "Moves": "c4e2 h4h7 c7h7 c1c8 g8g7 c8c7",
+        "Rating": 1858,
+        "GameUrl": "https://lichess.org/IxCahP6X/black#67"
+    },
+    "discoveredAttack": {
+        "PuzzleId": "001XA",
+        "FEN": "1qr2rk1/pb2bppp/8/8/2p1N3/P1Bn2P1/2Q2PBP/1R3RK1 b - - 3 23",
+        "Moves": "b8c7 b1b7 c7b7 e4f6 e7f6 g2b7",
+        "Rating": 1745,
+        "GameUrl": "https://lichess.org/KZRiN695/black#45"
+    },
+    "doubleBishopMate": {
+        "PuzzleId": "00FjB",
+        "FEN": "rnbk3r/pppp1Bpp/8/5p2/4p3/2PP4/P1P2PPP/R1B1K2R b KQ - 0 13",
+        "Moves": "h8f8 c1g5",
+        "Rating": 891,
+        "GameUrl": "https://lichess.org/r1BPO2dx/black#25"
+    },
+    "doubleCheck": {
+        "PuzzleId": "00LRq",
+        "FEN": "1k6/1p1q4/P2p3p/1NpPpn1Q/5b2/2P3r1/1P2B1P1/R6K b - - 3 28",
+        "Moves": "g3g7 a6a7 b8a8 b5c7 d7c7 h5e8 c7b8 a7b8q",
+        "Rating": 2202,
+        "GameUrl": "https://lichess.org/i9yxFCW9/black#55"
+    },
+    "dovetailMate": {
+        "PuzzleId": "00j1r",
+        "FEN": "8/2rkb3/1p6/6P1/5q2/3R4/Q1P1K3/8 b - - 4 37",
+        "Moves": "d7c6 a2d5",
+        "Rating": 1680,
+        "GameUrl": "https://lichess.org/2Nj3D5mV/black#73"
+    },
+    "enPassant": {
+        "PuzzleId": "00RPk",
+        "FEN": "8/2p5/5ppp/1PkP4/p4PPP/P1K5/8/8 b - - 0 39",
+        "Moves": "c5b5 c3d4 c7c5 d5c6 b5c6 d4c4",
+        "Rating": 1500,
+        "GameUrl": "https://lichess.org/vOFXdfEu/black#77"
+    },
+    "endgame": {
+        "PuzzleId": "0000D",
+        "FEN": "5rk1/1p3ppp/pq3b2/8/8/1P1Q1N2/P4PPP/3R2K1 w - - 2 27",
+        "Moves": "d3d6 f8d8 d6d8 f6d8",
+        "Rating": 1452,
+        "GameUrl": "https://lichess.org/F8M8OS71#52"
+    },
+    "equality": {
+        "PuzzleId": "005YX",
+        "FEN": "2rr4/2N2pk1/p1Q1b1pp/1p4q1/3pP3/1B1P4/PPP3PP/6RK w - - 7 25",
+        "Moves": "c7e6 f7e6 c6b7 g7h8",
+        "Rating": 1440,
+        "GameUrl": "https://lichess.org/zbi5w5Qy#48"
+    },
+    "exposedKing": {
+        "PuzzleId": "000qP",
+        "FEN": "8/7R/8/5p2/4bk1P/8/2r2K2/6R1 w - - 7 51",
+        "Moves": "f2f1 f4f3 f1e1 c2c1 e1d2 c1g1",
+        "Rating": 2055,
+        "GameUrl": "https://lichess.org/r4xUR6fC#100"
+    },
+    "fork": {
+        "PuzzleId": "000rO",
+        "FEN": "3R4/8/K7/pB2b3/1p6/1P2k3/3p4/8 w - - 4 58",
+        "Moves": "a6a5 e5c7 a5b4 c7d8",
+        "Rating": 1075,
+        "GameUrl": "https://lichess.org/tzeeBEc2#114"
+    },
+    "hangingPiece": {
+        "PuzzleId": "00008",
+        "FEN": "r6k/pp2r2p/4Rp1Q/3p4/8/1N1P2R1/PqP2bPP/7K b - - 0 24",
+        "Moves": "f2g3 e6e7 b2b1 b3c1 b1c1 h6c1",
+        "Rating": 1995,
+        "GameUrl": "https://lichess.org/787zsVup/black#47"
+    },
+    "hookMate": {
+        "PuzzleId": "009IO",
+        "FEN": "3rk3/5p1r/p2Np1p1/3bP3/P2n4/8/1P3RPP/5RK1 b - - 4 25",
+        "Moves": "e8e7 f2f7 h7f7 f1f7",
+        "Rating": 1170,
+        "GameUrl": "https://lichess.org/LJBrm9Or/black#49"
+    },
+    "interference": {
+        "PuzzleId": "002LF",
+        "FEN": "7r/p2q1pk1/1pp3p1/8/6P1/4Q3/PP1R1P1r/5KN1 b - - 0 38",
+        "Moves": "d7g4 e3e5 f7f6 e5c7 g7h6 c7h2",
+        "Rating": 2292,
+        "GameUrl": "https://lichess.org/md88dHiL/black#75"
+    },
+    "intermezzo": {
+        "PuzzleId": "009XT",
+        "FEN": "rn1qk2r/pp3ppp/3bp1b1/3p4/3Pn2N/3BB3/PPP2PPP/RN1Q1RK1 w kq - 4 10",
+        "Moves": "h4g6 d6h2 g1h1 h7g6",
+        "Rating": 1923,
+        "GameUrl": "https://lichess.org/bf23N8Ng#18"
+    },
+    "kingsideAttack": {
+        "PuzzleId": "001h8",
+        "FEN": "2r3k1/2r4p/4p1p1/1p1q1pP1/p1bP1P1Q/P6R/5B2/2R3K1 b - - 5 34",
+        "Moves": "c4e2 h4h7 c7h7 c1c8 g8g7 c8c7",
+        "Rating": 1858,
+        "GameUrl": "https://lichess.org/IxCahP6X/black#67"
+    },
+    "knightEndgame": {
+        "PuzzleId": "005ws",
+        "FEN": "8/8/5pp1/3K3p/3N2kP/8/8/8 w - - 2 62",
+        "Moves": "d5e6 g6g5 h4g5 f6g5 e6d5 h5h4 d5e4 h4h3 d4f3 g4g3",
+        "Rating": 2419,
+        "GameUrl": "https://lichess.org/LOwACSXb#122"
+    },
+    "long": {
+        "PuzzleId": "00008",
+        "FEN": "r6k/pp2r2p/4Rp1Q/3p4/8/1N1P2R1/PqP2bPP/7K b - - 0 24",
+        "Moves": "f2g3 e6e7 b2b1 b3c1 b1c1 h6c1",
+        "Rating": 1995,
+        "GameUrl": "https://lichess.org/787zsVup/black#47"
+    },
+    "master": {
+        "PuzzleId": "000aY",
+        "FEN": "r4rk1/pp3ppp/2n1b3/q1pp2B1/8/P1Q2NP1/1PP1PP1P/2KR3R w - - 0 15",
+        "Moves": "g5e7 a5c3 b2c3 c6e7",
+        "Rating": 1435,
+        "GameUrl": "https://lichess.org/iihZGl6t#28"
+    },
+    "masterVsMaster": {
+        "PuzzleId": "001wr",
+        "FEN": "r4rk1/p3ppbp/Pp1q1np1/3PpbB1/2B5/2N5/1PPQ1PPP/3RR1K1 w - - 4 18",
+        "Moves": "f2f3 d6c5 g1h1 c5c4",
+        "Rating": 1007,
+        "GameUrl": "https://lichess.org/KnJ2mojX#34"
+    },
+    "mate": {
+        "PuzzleId": "000Zo",
+        "FEN": "4r3/1k6/pp3r2/1b2P2p/3R1p2/P1R2P2/1P4PP/6K1 w - - 0 35",
+        "Moves": "e5f6 e8e1 g1f2 e1f1",
+        "Rating": 1409,
+        "GameUrl": "https://lichess.org/n8Ff742v#68"
+    },
+    "mateIn1": {
+        "PuzzleId": "001gi",
+        "FEN": "r6r/1pNk1ppp/2np4/b3p3/4P1b1/N1Q5/P4PPP/R3KB1R w KQ - 3 18",
+        "Moves": "c7a8 a5c3",
+        "Rating": 848,
+        "GameUrl": "https://lichess.org/1sV2Hr22#34"
+    },
+    "mateIn2": {
+        "PuzzleId": "000Zo",
+        "FEN": "4r3/1k6/pp3r2/1b2P2p/3R1p2/P1R2P2/1P4PP/6K1 w - - 0 35",
+        "Moves": "e5f6 e8e1 g1f2 e1f1",
+        "Rating": 1409,
+        "GameUrl": "https://lichess.org/n8Ff742v#68"
+    },
+    "mateIn3": {
+        "PuzzleId": "001wR",
+        "FEN": "6nr/pp3p1p/k1p5/8/1QN5/2P1P3/4KPqP/8 b - - 5 26",
+        "Moves": "b7b5 b4a5 a6b7 c4d6 b7b8 a5d8",
+        "Rating": 1109,
+        "GameUrl": "https://lichess.org/ruvbd9JW/black#51"
+    },
+    "mateIn4": {
+        "PuzzleId": "00LRq",
+        "FEN": "1k6/1p1q4/P2p3p/1NpPpn1Q/5b2/2P3r1/1P2B1P1/R6K b - - 3 28",
+        "Moves": "g3g7 a6a7 b8a8 b5c7 d7c7 h5e8 c7b8 a7b8q",
+        "Rating": 2202,
+        "GameUrl": "https://lichess.org/i9yxFCW9/black#55"
+    },
+    "mateIn5": {
+        "PuzzleId": "051YJ",
+        "FEN": "7k/pp2q1p1/1n2p1Bp/1b3pN1/1n1P3P/8/PP1K1PP1/1Q5R b - - 0 24",
+        "Moves": "h6g5 h4g5 h8g8 h1h8 g8h8 b1h1 h8g8 h1h7 g8f8 h7h8",
+        "Rating": 1752,
+        "GameUrl": "https://lichess.org/BLp2HacV/black#47"
+    },
+    "middlegame": {
+        "PuzzleId": "00008",
+        "FEN": "r6k/pp2r2p/4Rp1Q/3p4/8/1N1P2R1/PqP2bPP/7K b - - 0 24",
+        "Moves": "f2g3 e6e7 b2b1 b3c1 b1c1 h6c1",
+        "Rating": 1995,
+        "GameUrl": "https://lichess.org/787zsVup/black#47"
+    },
+    "oneMove": {
+        "PuzzleId": "001gi",
+        "FEN": "r6r/1pNk1ppp/2np4/b3p3/4P1b1/N1Q5/P4PPP/R3KB1R w KQ - 3 18",
+        "Moves": "c7a8 a5c3",
+        "Rating": 848,
+        "GameUrl": "https://lichess.org/1sV2Hr22#34"
+    },
+    "opening": {
+        "PuzzleId": "00206",
+        "FEN": "r3kb1r/pppqpn1p/5p2/3p1bpQ/2PP4/4P1B1/PP3PPP/RN2KB1R w KQkq - 1 11",
+        "Moves": "b1c3 f5g4 h5g4 d7g4",
+        "Rating": 1640,
+        "GameUrl": "https://lichess.org/MbJRo6PT#20"
+    },
+    "pawnEndgame": {
+        "PuzzleId": "000Vc",
+        "FEN": "8/8/4k1p1/2KpP2p/5PP1/8/8/8 w - - 0 53",
+        "Moves": "g4h5 g6h5 f4f5 e6e5 f5f6 e5f6",
+        "Rating": 1556,
+        "GameUrl": "https://lichess.org/l6AejDMO#104"
+    },
+    "pin": {
+        "PuzzleId": "0018S",
+        "FEN": "2kr3r/pp3p2/4p2p/1N1p2p1/3Q4/1P1P4/2q2PPP/5RK1 b - - 1 20",
+        "Moves": "b7b6 d4a1 a7a5 f1c1",
+        "Rating": 2612,
+        "GameUrl": "https://lichess.org/H1ARO2GL/black#39"
+    },
+    "promotion": {
+        "PuzzleId": "001w5",
+        "FEN": "1rb2rk1/q5P1/4p2p/3p3p/3P1P2/2P5/2QK3P/3R2R1 b - - 0 29",
+        "Moves": "f8f7 c2h7 g8h7 g7g8q",
+        "Rating": 1073,
+        "GameUrl": "https://lichess.org/0e1vxAEn/black#57"
+    },
+    "queenEndgame": {
+        "PuzzleId": "003UW",
+        "FEN": "8/6pk/7p/2p5/2qp4/5PP1/P3QK1P/8 b - - 1 40",
+        "Moves": "c4d5 e2e4 d5e4 f3e4",
+        "Rating": 1561,
+        "GameUrl": "https://lichess.org/cXMga3rb/black#79"
+    },
+    "queenRookEndgame": {
+        "PuzzleId": "00VC1",
+        "FEN": "1k2r3/p2r1R2/2Q5/1p5p/P1P3p1/8/6PP/7K w - - 2 44",
+        "Moves": "c6d7 e8e1 f7f1 e1f1",
+        "Rating": 442,
+        "GameUrl": "https://lichess.org/EjJXrCqs#86"
+    },
+    "queensideAttack": {
+        "PuzzleId": "002CP",
+        "FEN": "r5k1/pp4pp/4p1q1/4p3/3n4/P5P1/1PP2Q1P/2KR1R2 w - - 4 24",
+        "Moves": "f2e3 g6c2",
+        "Rating": 951,
+        "GameUrl": "https://lichess.org/pHZnIFdb#46"
+    },
+    "quietMove": {
+        "PuzzleId": "004sg",
+        "FEN": "6k1/p3b2p/1p1pP3/2p3P1/1Pnp3B/P6P/3Q3K/8 w - - 0 38",
+        "Moves": "b4c5 c4d2 c5c6 d6d5 g5g6 e7d6",
+        "Rating": 2281,
+        "GameUrl": "https://lichess.org/pSRIvt7K#74"
+    },
+    "rookEndgame": {
+        "PuzzleId": "0008Q",
+        "FEN": "8/4R3/1p2P3/p4r2/P6p/1P3Pk1/4K3/8 w - - 1 64",
+        "Moves": "e7f7 f5e5 e2f1 e5e6",
+        "Rating": 1276,
+        "GameUrl": "https://lichess.org/MQSyb3KW#126"
+    },
+    "sacrifice": {
+        "PuzzleId": "001XA",
+        "FEN": "1qr2rk1/pb2bppp/8/8/2p1N3/P1Bn2P1/2Q2PBP/1R3RK1 b - - 3 23",
+        "Moves": "b8c7 b1b7 c7b7 e4f6 e7f6 g2b7",
+        "Rating": 1745,
+        "GameUrl": "https://lichess.org/KZRiN695/black#45"
+    },
+    "short": {
+        "PuzzleId": "0000D",
+        "FEN": "5rk1/1p3ppp/pq3b2/8/8/1P1Q1N2/P4PPP/3R2K1 w - - 2 27",
+        "Moves": "d3d6 f8d8 d6d8 f6d8",
+        "Rating": 1452,
+        "GameUrl": "https://lichess.org/F8M8OS71#52"
+    },
+    "skewer": {
+        "PuzzleId": "000qP",
+        "FEN": "8/7R/8/5p2/4bk1P/8/2r2K2/6R1 w - - 7 51",
+        "Moves": "f2f1 f4f3 f1e1 c2c1 e1d2 c1g1",
+        "Rating": 2055,
+        "GameUrl": "https://lichess.org/r4xUR6fC#100"
+    },
+    "smotheredMate": {
+        "PuzzleId": "00pER",
+        "FEN": "r2q1rk1/4N1bp/p2p2p1/2p3N1/Pp4P1/1Q5P/1P1n1P2/5RK1 b - - 0 21",
+        "Moves": "g8h8 b3g8 f8g8 g5f7",
+        "Rating": 1571,
+        "GameUrl": "https://lichess.org/cQjDrt9I/black#41"
+    },
+    "superGM": {
+        "PuzzleId": "001xl",
+        "FEN": "8/4R1k1/p5pp/3B4/5q2/8/5P1P/6K1 b - - 5 40",
+        "Moves": "g7f6 e7f7 f6e5 f7f4",
+        "Rating": 1235,
+        "GameUrl": "https://lichess.org/bEQkfPQD/black#79"
+    },
+    "trappedPiece": {
+        "PuzzleId": "000tp",
+        "FEN": "4r3/5pk1/1p3np1/3p3p/2qQ4/P4N1P/1P3RP1/7K w - - 6 34",
+        "Moves": "d4b6 f6e4 h1g1 e4f2",
+        "Rating": 2051,
+        "GameUrl": "https://lichess.org/GeXqsW90#66"
+    },
+    "underPromotion": {
+        "PuzzleId": "03kqY",
+        "FEN": "8/2Q2ppk/4b2p/8/4P3/2p3P1/4KP1P/2r5 w - - 4 49",
+        "Moves": "f2f4 e6b3 e4e5 c3c2 e5e6 f7e6 c7c3 c1d1 c3b3 c2c1n e2d1 c1b3",
+        "Rating": 2780,
+        "GameUrl": "https://lichess.org/W9OcpQ5I#96"
+    },
+    "veryLong": {
+        "PuzzleId": "003YT",
+        "FEN": "r1bqk1nr/1pp2ppp/p1pb4/4p3/3PP3/5N2/PPP2PPP/RNBQ1RK1 b kq - 0 6",
+        "Moves": "d8f6 d4e5 d6e5 c1g5 f6d6 f3e5 d6d1 f1d1",
+        "Rating": 1729,
+        "GameUrl": "https://lichess.org/TAffogpQ/black#11"
+    },
+    "xRayAttack": {
+        "PuzzleId": "00Bg4",
+        "FEN": "3r2k1/1q3ppp/p2rp3/Qp1B4/7P/P4P2/1PP3P1/1K1R3R b - - 0 21",
+        "Moves": "d6d5 a5d8 d5d8 d1d8",
+        "Rating": 1374,
+        "GameUrl": "https://lichess.org/6qWf8wOP/black#41"
+    },
+    "zugzwang": {
+        "PuzzleId": "00MHi",
+        "FEN": "8/8/5pp1/5k1p/5P1P/4R1P1/2r5/5K2 w - - 0 43",
+        "Moves": "e3e2 c2e2 f1e2 f5g4 e2f2 g4h3",
+        "Rating": 2260,
+        "GameUrl": "https://lichess.org/im48PGD7#84"
+    }
+}
