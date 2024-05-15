@@ -1,5 +1,8 @@
 # Chess Game Analysis Tool
 
+## For Thesis Supervisors
+Main.py contains both Player and GameAnalysis class, and ML.ipynb at the end of the file contains the recommendation system and associated analytics.
+
 ## Overview
 This project provides tools for analyzing chess games by connecting to the Lichess platform and utilizing a local chess engine. It features two main classes, `Player` and `GameAnalysis`, which allow users to fetch game data from Lichess, analyze it, and display detailed insights about mistakes, game phases, and specific endgame scenarios.
 
