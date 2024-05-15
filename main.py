@@ -2,6 +2,7 @@ import berserk
 import chess.pgn
 import chess.engine
 from collections import defaultdict
+import pandas as pd
 
 class Player:
     def __init__(self, api_token, username, engine_path=None):
@@ -63,10 +64,20 @@ class Player:
         Analyzes the player's games and displays the analysis results.
         """
         for game in self.games:
-            analysis = GameAnalysis(game, self.username, self.engine_path)
-            game_analysis_result = analysis.analyze_game()
-            if game_analysis_result is not None:
-                self.analysis_results.append([game["id"],game_analysis_result])
+            if 'analysis' not in game:
+                print(f"Game {game['id']} does not have analysis data.")
+                continue  
+        
+            try:
+                    analysis = GameAnalysis(game, self.username, self.engine_path)
+                    game_analysis_result = analysis.analyze_game()
+                    if game_analysis_result is not None:
+                        self.analysis_results.append([game["id"], game_analysis_result])
+
+            except KeyError as e:
+                print(f"KeyError {e} occurred while analyzing game {game['id']} for {self.username}.")
+                continue
+
         self.analyze_mistakes_aggregate()
         self.display_aggregate_analysis_results()
 
@@ -77,7 +88,7 @@ class Player:
         """
         for result in self.analysis_results:
             print(f"Game ID: {result[0]}, Mistakes: {result[1]}")
-            # Expand this method to display more detailed analysis results
+
     
     def analyze_mistakes_aggregate(self):
         """
@@ -92,11 +103,9 @@ class Player:
                 mistake_type = error['type']
                 mistake_counts[mistake_type] += 1  
 
-                # Increment theme counts for this mistake type
                 for theme in error['themes']:
                     theme_counts[mistake_type][theme] += 1
 
-        # Store the aggregate results in the player object for later use or display
         self.mistake_counts = mistake_counts
         self.theme_counts = theme_counts
 
@@ -109,13 +118,73 @@ class Player:
             print(f"{mistake}: {count}")
 
         print("\nAggregate Theme Counts by Mistake Type (sorted):")
+
         # Sorting themes within each mistake type by count, in descending order
         for mistake, themes in sorted(self.theme_counts.items(), key=lambda item: sum(item[1].values()), reverse=True):
             print(f"{mistake}:")
             for theme, count in sorted(themes.items(), key=lambda item: item[1], reverse=True):
                 print(f"  {theme}: {count}")
 
-  
+
+    
+    def save_analysis_results(self):
+        """
+        Converts the theme_counts dictionary into a DataFrame with dummy variables,
+        and saves it as a CSV file.
+        """
+        # List of all possible themes
+        all_themes = ['advancedPawn', 'advantage', 'attackingF2F7', 'bishopEndgame', 'castling', 'crushing', 
+                      'doubleCheck', 'enPassant', 'endgame', 'equality', 'hangingPiece', 'knightEndgame', 'long', 
+                      'master', 'masterVsMaster', 'mate', 'mateIn1', 'mateIn2', 'mateIn3', 'mateIn4', 'mateIn5', 
+                      'middlegame', 'oneMove', 'opening', 'pawnEndgame', 'promotion', 'queenEndgame', 
+                      'queenRookEndgame', 'rookEndgame', 'short', 'superGM', 'underPromotion', 'veryLong']
+
+        # List of all possible openings
+        all_openings = ['Nimzowitsch-Larsen Attack', 'Bird System', 'Réti Opening', 'English Opening', "Queen's Pawn", 
+                        'Rat Defense', 'Old Benoni Defense', 'Indian Defense', 'Dutch Defense', "King's Pawn", 
+                        'Scandinavian Defense', 'Alekhine Defense', 'Robatsch Defense', 'Pirc Defense', 'Caro-Kann Defense', 
+                        'Sicilian Defense', 'French Defense', 'Centre Gambit Accepted', "King's Bishop's Opening", 
+                        'Vienna Game', "King's Gambit", "King's Knight's Opening", "Queen's Gambit", 
+                        'Neo-Grünfeld Defense', 'Grünfeld Defense', 'East Indian Defense', 'Catalan Opening', 
+                        'Anti-Nimzo-Indian', 'Nimzo-Indian Defense', "King's Indian Defense"]
+
+        # Define weights for the mistake types
+        mistake_weights = {
+            'Blunder': 4,
+            'Mistake': 2,
+            'Inaccuracy': 1
+        }
+
+        df = pd.DataFrame({'Themes': all_themes + all_openings, 'mistake_count': [0]*len(all_themes + all_openings)})
+        df.set_index('Themes', inplace=True)
+
+        # Update the DataFrame with the actual counts from the theme_counts dictionary, multiplied by the weights
+        for mistake, themes in self.theme_counts.items():
+            for theme, count in themes.items():
+                if theme in df.index:
+                    if theme == "veryLong" or theme == "long" or theme == "short" or theme == "oneMove":
+                        df.at[theme, 'mistake_count'] += count 
+                        continue
+                    else:
+                        df.at[theme, 'mistake_count'] += count * mistake_weights[mistake]
+                else:
+                    for opening in all_openings:
+                        if opening in theme:
+                            df.at[opening, 'mistake_count'] += count * mistake_weights[mistake]
+
+       
+        # Safely get the puzzle rating
+        puzzle_rating = self.profile.get("perfs", {}).get("puzzle", {}).get("rating")
+        
+        if puzzle_rating is not None:
+            # Save the DataFrame as a CSV file
+            df.to_csv(f"player_analysis/{self.username}-{puzzle_rating}.csv")
+            print(f"Analysis results saved to {self.username}")
+        else:
+            print("No puzzle rating available for the player.")
+
+    
+
 
 class GameAnalysis:
     """
@@ -227,7 +296,6 @@ class GameAnalysis:
             self.is_backRankMate,
             self.is_enPassant,
             self.variation_length,
-            #self.is_capturingDefender,
             self.is_hangingPiece,
             self.is_doubleCheck,
             self.is_pin
@@ -237,6 +305,7 @@ class GameAnalysis:
             result = theme_check()
             if result:
                 themes.append(result)
+
             # Reset the board state to the main board's current state after each check
             self.get_board_state(move_number-1, "variation")
             self.calculate_material()
@@ -416,11 +485,10 @@ class GameAnalysis:
                 - "mastervsMaster" if both players have a title.
                 - "master" if only one player has a title.
         """
-        # Possible bug - to check
-        white_title = self.game["players"]["white"].get("title")
-        black_title = self.game["players"]["black"].get("title")
+        white_title = self.game["players"]["white"]["user"].get("title")
+        black_title = self.game["players"]["black"]["user"].get("title")
         if white_title and black_title:
-            return "mastervsMaster"
+            return "masterVsMaster"
         elif white_title is not None or black_title is not None:
             return "master"
 
@@ -471,6 +539,9 @@ class GameAnalysis:
 
     
     def is_promotion(self):
+        """
+        Check if any promotion occured.
+        """
         for san in self.variation:
             move = self.variation_board.push_san(san)
             if move.promotion is not None and move.promotion != chess.QUEEN:
@@ -497,7 +568,7 @@ class GameAnalysis:
         """
         Check if the evaluation indicates a significant advantage for one side.
         """
-        # there is some offeset in the numbering, -2 eval gets eval and the move of the opponent before our move
+        
         eval = self.evaluations[self.move_number-2].get('eval')
         mistake = self.evaluations[self.move_number-2].get('judgment')
 
@@ -623,6 +694,9 @@ class GameAnalysis:
             engine.quit()
             
     def is_defended(self, square):
+        """
+        Check if the square is defended.
+        """
         piece = self.variation_board.piece_at(square)
         if piece is None:
             return False
@@ -630,10 +704,16 @@ class GameAnalysis:
         return self.variation_board.is_attacked_by(piece.color, square)
     
     def is_hanging(self, square):
+        """
+        Check if piece on the square is hanging.
+        """
         return not self.is_defended(square)
 
     
     def is_hangingPiece(self):
+        """
+        Check if piece on the square is hanging and gets captured.
+        """
         
         init_material_diff = abs(self.white_material - self.black_material)
 
@@ -657,9 +737,7 @@ class GameAnalysis:
         return False
 
     def is_capturingDefender(self):
-
-        ## DOES NOT WORK PROPERLY - TO BE FIXED
-
+        ## Does not work yet
         for san in self.variation:
             move = self.main_board.parse_san(san)
             if self.main_board.is_capture(move):
@@ -676,7 +754,7 @@ class GameAnalysis:
 
                 if prev_move and self.variation_board.is_capture(move) and move.to_square != prev_move.to_square:
                     target_square = move.to_square
-                    moved_piece = self.variation_board.piece_at(move.from_square)  # Get the piece that moved
+                    moved_piece = self.variation_board.piece_at(move.from_square)  
                     target_piece = self.main_board.piece_at(target_square)
                     self.variation_board.push(move)
 
@@ -688,14 +766,17 @@ class GameAnalysis:
                                 and not self.main_board.is_check():
                             return True
                 else:
-                    # This push is only necessary if the above condition is not met
+
                     self.variation_board.push(move)
                     
-                prev_move = move  # Update the previous move
+                prev_move = move  
 
         return False
         
     def is_discoveredcheck(self):
+        """
+        Check if discovered check happens.
+        """
         for san in self.variation:
             move = self.variation_board.parse_san(san)
             checkers = self.variation_board.checkers()
@@ -704,8 +785,9 @@ class GameAnalysis:
             self.variation_board.push(move)
         return False
     
-    ## NOT DONE
+    
     def is_discoveredAttack(self):
+        ## NOT DONE YET
         if self.is_discoveredcheck():
             return True
         for idx, san in enumerate(self.variation, start=1):
@@ -718,6 +800,9 @@ class GameAnalysis:
         return False
     
     def is_doubleCheck(self):
+        """
+        Check if king gets attacked twice.
+        """
         for san in self.variation:
             move = self.variation_board.parse_san(san)
             if len(self.variation_board.checkers()) > 1:
